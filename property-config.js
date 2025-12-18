@@ -86,7 +86,7 @@ const propertyConfig = {
   share: {
     whatsappText: `🏢 *EDIFICIO EN VENTA - LA CASTELLANA, BOGOTÁ*
 
-📍 Ubicación: La Castellana, Bogotá
+📍 Ubicación: La Castellana, Barrios Unidos, Bogotá D.C.
 💲 Precio: $5.000.000.000
 📐 Área Construida: 871.24 m²
 🏢 Pisos: 5
