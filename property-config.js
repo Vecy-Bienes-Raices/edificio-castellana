@@ -4,10 +4,10 @@
  */
 const propertyConfig = {
   seo: {
-    title: "Venta Edificio en La Castellana Bogotá - 5 Pisos",
-    description: "Venta Edificio La Castellana Bogotá - $5.000 Millones - 871.24m² - 5 Pisos - 6 Apartamentos + 1 Pent-house - Uso Mixto/Oficinas/Vivienda.",
-    keywords: "Venta Edificio La Castellana, Edificio Bogotá, Inversión Inmobiliaria, Edificio Oficinas Bogotá, Venta Edificio Barrios Unidos",
-    ogUrl: "", // Se puede dejar vacío o poner la url final si se conoce
+    title: "Venta Edificio en La Castellana Bogotá - 5 Pisos | Vecy Bienes Raíces",
+    description: "Gran Oportunidad de Inversión: Edificio completo en La Castellana, Bogotá. 871 m², 5 pisos, 6 apartamentos + Pent-house. Ideal para oficinas o vivienda.",
+    keywords: "Venta Edificio La Castellana, Edificio Bogotá, Inversión Inmobiliaria, Edificio Oficinas Bogotá, Venta Edificio Barrios Unidos, Inmuebles Bogotá",
+    ogUrl: "https://vecybienesraices.github.io/edificio-castellana/", // URL probable si se usa GitHub Pages
     ogImage: "assets/1.jpg",
     author: "Vecy Bienes Raíces",
     copyright: "Vecy Bienes Raíces"
@@ -99,7 +99,7 @@ const propertyConfig = {
 🏢 Ideal oficinas, vivienda, airbnb.
 🔼 Ascensor, Planta Eléctrica.
 
-*🔗 Más información:*
-(Enlace aquí)`
+*🔗 Ver Ficha Completa:*
+https://vecybienesraices.github.io/edificio-castellana/`
   }
 };
