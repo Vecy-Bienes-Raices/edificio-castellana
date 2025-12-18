@@ -60,7 +60,8 @@ const propertyConfig = {
 
   mapa: {
     // Coordenadas aproximadas para La Castellana, Bogotá (Genérico)
-    urlEmbed: "https://maps.google.com/maps?q=La+Castellana,+Barrios+Unidos,+Bogota&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    // Usamos coordenadas del centro del barrio para evitar pines en direcciones exactas
+    urlEmbed: "https://maps.google.com/maps?q=4.686,-74.060&z=15&output=embed",
     titulo: "Ubicación La Castellana"
   },
 
