@@ -4,13 +4,13 @@
  */
 const propertyConfig = {
   seo: {
-    title: "Venta Edificio en La Castellana Bogotá - 5 Pisos | Vecy Bienes Raíces",
+    title: "Venta Edificio en La Castellana Bogotá - 5 Pisos",
     description: "Gran Oportunidad de Inversión: Edificio completo en La Castellana, Bogotá. 871 m², 5 pisos, 6 apartamentos + Pent-house. Ideal para oficinas o vivienda.",
     keywords: "Venta Edificio La Castellana, Edificio Bogotá, Inversión Inmobiliaria, Edificio Oficinas Bogotá, Venta Edificio Barrios Unidos, Inmuebles Bogotá",
     ogUrl: "https://edificio-castellana-bogota.netlify.app/", 
     ogImage: "assets/1.jpg",
-    author: "Vecy Bienes Raíces",
-    copyright: "Vecy Bienes Raíces"
+    author: "Inmobiliaria",
+    copyright: "Derechos Reservados"
   },
   
   infoPrincipal: {
@@ -28,7 +28,7 @@ const propertyConfig = {
     { label: "Parqueaderos", value: "9", icon: "🚗" },
     { label: "Estrato", value: "4", icon: "✨" },
     { label: "Año", value: "2002", icon: "📅" },
-    { label: "Barrio", value: "La Castellana", icon: "📍" },
+    { label: "Barrio", value: "La Castellana, Barrios Unidos, Bogotá", icon: "📍" },
     { label: "Uso", value: "Mixto/Vivienda", icon: "💼" }
   ],
 
@@ -59,16 +59,16 @@ const propertyConfig = {
   destacadoUbicacion: "Ubicación estratégica en <strong>La Castellana</strong>, cerca de avenidas principales (Auto-Norte, NQS, Calle 100). Ideal para oficinas, empresas o vivienda.",
 
   mapa: {
-    // Coordenadas aproximadas para Carrera 46 # 92-61, Bogotá
-    urlEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.626357497746!2d-74.05886562415174!3d4.682645641987625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a9096576859%3A0xe552093755401d29!2sCra.%2046%20%2392-61%2C%20Barrios%20Unidos%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco",
-    titulo: "Ubicación Edificio La Castellana"
+    // Coordenadas aproximadas para La Castellana, Bogotá (Genérico)
+    urlEmbed: "https://maps.google.com/maps?q=La+Castellana,+Barrios+Unidos,+Bogota&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    titulo: "Ubicación La Castellana"
   },
 
   descripcionFinal: {
     titulo: "🌆 Oportunidad Única en el Corazón de Bogotá",
     texto: `🏢 <strong>Edificio completo de 5 pisos</strong> construido en 2002. Consta de 6 apartamentos de 73 m² (dos por piso) y un espectacular <strong>Pent-House Dúplex de 300 m²</strong> con terraza.
     <br><br>
-    Ofrece <strong>7 parqueaderos privados y 2 de visitantes</strong>, 8 depósitos y ascensor. Su ubicación estratégica con acceso por la Carrera 30 y Calle 92 lo hace ideal para <strong>oficinas, projetos empresariales, educación, Airbnb, hoteles o multinacionales</strong>.
+    Ofrece <strong>7 parqueaderos privados y 2 de visitantes</strong>, 8 depósitos y ascensor. Su ubicación estratégica con acceso por vías principales lo hace ideal para <strong>oficinas, projetos empresariales, educación, Airbnb, hoteles o multinacionales</strong>.
     <br><br>
     ¡No dejes pasar esta inversión en una zona de alto impacto comercial!`
   },
@@ -85,7 +85,7 @@ const propertyConfig = {
   share: {
     whatsappText: `🏢 *EDIFICIO EN VENTA - LA CASTELLANA, BOGOTÁ*
 
-📍 Ubicación: Carrera 46 # 92-61
+📍 Ubicación: La Castellana, Bogotá
 💲 Precio: $5.000.000.000
 📐 Área Construida: 871.24 m²
 🏢 Pisos: 5
