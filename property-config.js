@@ -7,7 +7,7 @@ const propertyConfig = {
     title: "Venta Edificio en La Castellana Bogotá - 5 Pisos | Vecy Bienes Raíces",
     description: "Gran Oportunidad de Inversión: Edificio completo en La Castellana, Bogotá. 871 m², 5 pisos, 6 apartamentos + Pent-house. Ideal para oficinas o vivienda.",
     keywords: "Venta Edificio La Castellana, Edificio Bogotá, Inversión Inmobiliaria, Edificio Oficinas Bogotá, Venta Edificio Barrios Unidos, Inmuebles Bogotá",
-    ogUrl: "https://vecybienesraices.github.io/edificio-castellana/", // URL probable si se usa GitHub Pages
+    ogUrl: "https://vecy-bienes-raices.github.io/edificio-castellana/", // URL probable si se usa GitHub Pages
     ogImage: "assets/1.jpg",
     author: "Vecy Bienes Raíces",
     copyright: "Vecy Bienes Raíces"
@@ -100,6 +100,6 @@ const propertyConfig = {
 🔼 Ascensor, Planta Eléctrica.
 
 *🔗 Ver Ficha Completa:*
-https://vecybienesraices.github.io/edificio-castellana/`
+https://vecy-bienes-raices.github.io/edificio-castellana/`
   }
 };
