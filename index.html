@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="seo-title">Ficha Técnica - Inmueble</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" as="image" href="assets/1.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="description" content="" id="seo-description" />
+    <meta property="og:title" content="" id="og-title" />
+    <meta property="og:description" content="" id="og-description" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" id="og-url" />
+    <meta property="og:image" content="" id="og-image" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:site_name" content="Vecy Bienes Raíces" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="" id="tw-title" />
+    <meta name="twitter:description" content="" id="tw-description" />
+    <meta name="twitter:image" content="" id="tw-image" />
+    <meta name="keywords" content="" id="seo-keywords" />
+    <meta name="author" content="Vecy Bienes Raíces" />
+    <meta name="robots" content="index, follow" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(
+          ellipse at center,
+          #c19a6b 0%,
+          #a0826d 25%,
+          #8b7355 40%,
+          #6b5744 60%,
+          #5c4033 75%,
+          #4a332a 85%,
+          #3e2723 100%
+        );
+        background-attachment: fixed;
+        max-width: 210mm;
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          ellipse at center,
+          #c19a6b 0%,
+          #a0826d 25%,
+          #8b7355 40%,
+          #6b5744 60%,
+          #5c4033 75%,
+          #4a332a 85%,
+          #3e2723 100%
+        );
+        z-index: -1;
+        will-change: transform;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border-radius: 20px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+          inset 0 1px 1px rgba(255, 255, 255, 0.5);
+        position: relative;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
+      }
+      .glass-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          transparent 100%
+        );
+        border-radius: 20px 20px 0 0;
+        pointer-events: none;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .header h1 {
+        color: #1a1a1a;
+        font-size: 32px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        margin-bottom: 5px;
+        letter-spacing: -0.5px;
+      }
+      .header .match {
+        font-size: 24px;
+        color: #d4af37;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .precio-section {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .precio-section div {
+        flex: 1;
+      }
+      .gallery-section {
+        margin-bottom: 15px;
+      }
+      .specs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .spec-item {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(10px);
+        padding: 12px;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .spec-item .icon {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      .section-title {
+        background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 15px rgba(255, 107, 53, 0.3);
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      .amenities-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .highlight-box {
+        background: rgba(212, 175, 55, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 15px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .footer {
+        text-align: center;
+        margin-top: 15px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .precio-section h2 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+      .precio-section .amount {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .spec-item .label {
+        font-size: 14px;
+        color: #f5f5dc;
+        margin-bottom: 4px;
+        font-weight: 600;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      }
+      .spec-item .value {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+      .amenity-item {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 15px;
+        color: #1a1a1a;
+        font-weight: 600;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .amenity-item .emoji {
+        font-size: 16px;
+      }
+      .highlight-box h3,
+      .glass-card > h3 {
+        color: #1a1a1a;
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #1a1a1a;
+        font-weight: 500;
+        text-align: justify;
+      }
+      .footer p {
+        color: #f5f5dc;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .footer .cta {
+        color: #d4af37;
+        font-size: 15px;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .video-wrapper video {
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+      }
+      .slider-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        animation: fadeIn 0.5s;
+      }
+      .slider-image.active {
+        display: block;
+        cursor: pointer;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 10;
+      }
+      .slider-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .prev-arrow {
+        left: 15px;
+      }
+      .next-arrow {
+        right: 15px;
+      }
+      .thumbnail-container {
+        overflow: hidden;
+        cursor: grab;
+        user-select: none;
+      }
+      .thumbnail-container.grabbing {
+        cursor: grabbing;
+      }
+      .thumbnail-strip {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        will-change: transform;
+      }
+      .thumbnail {
+        flex-shrink: 0;
+        width: calc(20% - 8px);
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+      }
+      .thumbnail:hover {
+        transform: scale(1.05);
+      }
+      .thumbnail.active {
+        border-color: #d4af37;
+      }
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;
+      }
+
+      #shareBtn {
+        background: linear-gradient(180deg, #FFD700 0%, #FDB931 50%, #DAA520 100%);
+        color: #3E2723;
+        border: none;
+        padding: 18px 50px;
+        font-size: 18px;
+        font-weight: 900;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        border-radius: 50px;
+        cursor: pointer;
+        min-width: 280px; 
+        justify-content: center;
+        text-align: center;
+        box-shadow: 
+          0 6px 0 #B8860B, 
+          0 12px 20px rgba(0, 0, 0, 0.3),
+          inset 0 2px 0 rgba(255, 255, 255, 0.5);
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      #shareBtn.shared-success {
+        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+        color: #ffffff;
+        box-shadow: 
+          0 6px 0 #15803d, 
+          0 12px 20px rgba(22, 163, 74, 0.4),
+          inset 0 2px 0 rgba(255, 255, 255, 0.5);
+        text-shadow: 0 2px 0 #14532d;
+      }
+
+      #shareBtn::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(45deg) translate(-100%, -100%);
+        transition: transform 0.6s;
+      }
+
+      #shareBtn:hover {
+        background: linear-gradient(180deg, #FFF8DC 0%, #FFD700 50%, #FFC107 100%);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 
+          0 10px 0 #B8860B, 
+          0 20px 40px rgba(255, 215, 0, 0.4),
+          inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        color: #251605;
+      }
+      
+      #shareBtn.shared-success:hover {
+        background: linear-gradient(180deg, #86efac 0%, #4ade80 50%, #22c55e 100%);
+        box-shadow: 
+          0 8px 0 #15803d, 
+          0 20px 40px rgba(22, 163, 74, 0.6),
+          inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        color: #ffffff;
+      }
+
+      #shareBtn:hover::after {
+        transform: rotate(45deg) translate(100%, 100%);
+      }
+
+      #shareBtn:active {
+        transform: translateY(4px);
+        box-shadow: 
+          0 2px 0 #15803d, 
+          0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .header h1 {
+          font-size: 26px;
+        }
+        .specs-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .amenities-list {
+          grid-template-columns: 1fr;
+        }
+        .thumbnail {
+          width: calc(33.33% - 7px);
+        }
+        #shareBtn {
+          padding: 12px 20px;
+        }
+      }
+
+      /* Lightbox */
+      .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .lightbox-overlay.visible {
+        display: flex;
+      }
+      .lightbox-content {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        animation: fadeIn 0.3s;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .lightbox-close:hover {
+        color: #bbb;
+      }
+      .lightbox-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 1001;
+      }
+      .lightbox-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .lightbox-prev {
+        left: 20px;
+      }
+      .lightbox-next {
+        right: 20px;
+      }
+      .lightbox-download {
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 1002;
+      }
+      .lightbox-download:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+      }
+
+      /* Map */
+      .map-container {
+        padding: 10px;
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 350px;
+        border: 0;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glass-card header">
+      <div id="header-badge" class="match"></div>
+      <h1 id="header-title"></h1>
+    </div>
+
+    <div class="precio-section">
+      <div>
+        <h2>💰 Precio de Venta</h2>
+        <div id="precio-venta" class="amount"></div>
+      </div>
+      <div style="text-align: right; display: none;"> <!-- Ocultamos admin si no hay -->
+        <h2>💵 Administración</h2>
+        <div id="valor-admin" class="amount"></div>
+      </div>
+    </div>
+
+    <div class="section-title">🎥 Recorrido Virtual</div>
+    <div class="glass-card video-wrapper">
+      <video id="video-element" src="" controls playsinline preload="metadata">
+        Tu navegador no soporta el tag de video.
+      </video>
+    </div>
+
+    <div class="section-title">📸 Galería de Fotos</div>
+    <div class="glass-card gallery-section">
+      <div class="slider-container">
+        <button class="slider-arrow prev-arrow">❮</button>
+        <button class="slider-arrow next-arrow">❯</button>
+      </div>
+      <div class="thumbnail-container">
+        <div class="thumbnail-strip"></div>
+      </div>
+    </div>
+
+    <div class="section-title">🔎 Detalles del Inmueble</div>
+    <div class="glass-card">
+      <div id="specs-grid" class="specs-grid">
+        <!-- Renderizado dinámico -->
+      </div>
+    </div>
+
+    <div class="section-title">🏡 Características Internas</div>
+    <div class="glass-card">
+      <div id="internas-list" class="amenities-list">
+        <!-- Renderizado dinámico -->
+      </div>
+      <div class="highlight-box">
+        <h3>🌟 Destacado</h3>
+        <p id="destacado-interno" class="description"></p>
+      </div>
+    </div>
+
+    <div class="section-title">🌟 Características Externas</div>
+    <div class="glass-card">
+      <div id="externas-list" class="amenities-list">
+        <!-- Renderizado dinámico -->
+      </div>
+      <div class="highlight-box">
+        <h3>📍 Ubicación y Entorno</h3>
+        <p id="destacado-ubicacion" class="description"></p>
+      </div>
+    </div>
+
+    <div class="section-title">🗺️ Ubicación en el Mapa</div>
+    <div class="glass-card map-container">
+      <iframe
+        id="map-iframe"
+        class="lazy-map"
+        data-src=""
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa de ubicación"
+      ></iframe>
+    </div>
+
+    <div class="glass-card">
+      <h3 id="final-desc-title"></h3>
+      <p id="final-desc-text" class="description"></p>
+    </div>
+
+    <div class="glass-card" style="text-align: center">
+      <button id="shareBtn">📤 COMPARTIR FICHA</button>
+    </div>
+    <div class="footer">
+      <p>¿Buscas conexión con la naturaleza y excelentes amenidades?</p>
+      <p class="cta">📞 Agenda tu cita y prepárate para enamorarte</p>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay">
+      <span class="lightbox-close">&times;</span>
+      <button class="lightbox-arrow lightbox-prev">❮</button>
+      <img class="lightbox-content" id="lightbox-img" />
+      <button class="lightbox-arrow lightbox-next">❯</button>
+      <a id="lightbox-download" class="lightbox-download" download>
+        ⬇️ Descargar
+      </a>
+    </div>
+
+    <!-- Cargar Configuración -->
+    <script src="property-config.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof propertyConfig === "undefined") {
+          console.error("No se encontró el archivo property-config.js");
+          return;
+        }
+
+        // --- SEO & Meta Tags ---
+        document.title = propertyConfig.seo.title;
+        document.getElementById("seo-description").content = propertyConfig.seo.description;
+        document.getElementById("og-title").content = propertyConfig.seo.title;
+        document.getElementById("og-description").content = propertyConfig.seo.description;
+        document.getElementById("og-url").content = propertyConfig.seo.ogUrl;
+        document.getElementById("og-image").content = propertyConfig.seo.ogImage;
+        document.getElementById("tw-title").content = propertyConfig.seo.title;
+        document.getElementById("tw-description").content = propertyConfig.seo.description;
+        document.getElementById("tw-image").content = propertyConfig.seo.ogImage;
+        document.getElementById("seo-keywords").content = propertyConfig.seo.keywords;
+
+        // --- Info Principal ---
+        document.getElementById("header-badge").innerText = propertyConfig.infoPrincipal.headerBadge;
+        document.getElementById("header-title").innerText = propertyConfig.infoPrincipal.tituloHtml;
+        document.getElementById("precio-venta").innerText = propertyConfig.infoPrincipal.precioVenta;
+        document.getElementById("valor-admin").innerText = propertyConfig.infoPrincipal.valorAdmin;
+
+        // --- Video ---
+        document.getElementById("video-element").src = propertyConfig.multimedia.videoUrl;
+
+        // --- Detalles (Specs Grid) ---
+        const specsGrid = document.getElementById("specs-grid");
+        propertyConfig.detalles.forEach(spec => {
+          const item = document.createElement("div");
+          item.className = "spec-item";
+          item.innerHTML = `
+            <div class="icon">${spec.icon}</div>
+            <div class="label">${spec.label}</div>
+            <div class="value">${spec.value}</div>
+          `;
+          specsGrid.appendChild(item);
+        });
+
+        // --- Características Internas ---
+        const internasGrid = document.getElementById("internas-list");
+        propertyConfig.caracteristicasInternas.forEach(feat => {
+          const item = document.createElement("div");
+          item.className = "amenity-item";
+          item.innerHTML = `<span class="emoji">${feat.emoji}</span> ${feat.name}`;
+          internasGrid.appendChild(item);
+        });
+        document.getElementById("destacado-interno").innerHTML = propertyConfig.destacadoInterno;
+
+        // --- Características Externas ---
+        const externasGrid = document.getElementById("externas-list");
+        propertyConfig.caracteristicasExternas.forEach(feat => {
+          const item = document.createElement("div");
+          item.className = "amenity-item";
+          item.innerHTML = `<span class="emoji">${feat.emoji}</span> ${feat.name}`;
+          externasGrid.appendChild(item);
+        });
+        document.getElementById("destacado-ubicacion").innerHTML = propertyConfig.destacadoUbicacion;
+
+        // --- Mapa ---
+        const mapIframe = document.getElementById("map-iframe");
+        mapIframe.dataset.src = propertyConfig.mapa.urlEmbed;
+        mapIframe.title = propertyConfig.mapa.titulo;
+
+        // --- Descripción Final ---
+        document.getElementById("final-desc-title").innerText = propertyConfig.descripcionFinal.titulo;
+        document.getElementById("final-desc-text").innerHTML = propertyConfig.descripcionFinal.texto;
+
+        // --- LÓGICA DE GALERÍA ---
+        const images = [];
+        if (propertyConfig.multimedia.imagesList.length > 0) {
+          images.push(...propertyConfig.multimedia.imagesList);
+        } else {
+          for (let i = 1; i <= propertyConfig.multimedia.imagesCount; i++) {
+            images.push(`${propertyConfig.multimedia.imagePrefix}${i}${propertyConfig.multimedia.imageExtension}`);
+          }
+        }
+
+        const sliderContainer = document.querySelector(".slider-container");
+        const thumbnailContainer = document.querySelector(".thumbnail-container");
+        const thumbnailStrip = document.querySelector(".thumbnail-strip");
+        const prevArrow = document.querySelector(".prev-arrow");
+        const nextArrow = document.querySelector(".next-arrow");
+
+        let currentSlide = 0, isDown = false, isDragging = false, startX, transformX;
+
+        function showSlide(index) {
+          if (index >= slides.length) index = 0;
+          if (index < 0) index = slides.length - 1;
+          currentSlide = index;
+
+          const currentSlideElement = slides[currentSlide];
+          if (currentSlideElement.dataset.src) {
+            currentSlideElement.src = currentSlideElement.dataset.src;
+            delete currentSlideElement.dataset.src;
+          }
+
+          slides.forEach((slide) => slide.classList.remove("active"));
+          slides[currentSlide].classList.add("active");
+
+          thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+          thumbnails[currentSlide].classList.add("active");
+
+          const activeThumb = thumbnails[currentSlide];
+          if (activeThumb) {
+            const containerRect = thumbnailContainer.getBoundingClientRect();
+            const thumbRect = activeThumb.getBoundingClientRect();
+            const scrollOffset = thumbRect.left - containerRect.left - containerRect.width / 2 + thumbRect.width / 2;
+            thumbnailContainer.scrollBy({ left: scrollOffset, behavior: "smooth" });
+          }
+        }
+
+        nextArrow.addEventListener("click", () => showSlide(currentSlide + 1));
+        prevArrow.addEventListener("click", () => showSlide(currentSlide - 1));
+
+        const observer = new IntersectionObserver(
+          (entries, self) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const thumbImg = entry.target.querySelector("img");
+                thumbImg.src = thumbImg.dataset.src;
+                self.unobserve(entry.target);
+              }
+            });
+          },
+          { root: thumbnailContainer, rootMargin: "0px 0px 0px 100px" }
+        );
+
+        images.forEach((src, index) => {
+          const img = document.createElement("img");
+          img.alt = `Foto ${index + 1}`;
+          img.classList.add("slider-image");
+          img.decoding = "async";
+          if (index === 0) {
+            img.src = src;
+            img.loading = "eager";
+            img.classList.add("active");
+          } else {
+            img.dataset.src = src;
+            img.loading = "lazy";
+          }
+          sliderContainer.insertBefore(img, prevArrow);
+
+          const thumbDiv = document.createElement("div");
+          thumbDiv.classList.add("thumbnail");
+          thumbDiv.dataset.index = index;
+          const thumbImg = document.createElement("img");
+          thumbImg.dataset.src = src;
+          thumbImg.alt = `Miniatura ${index + 1}`;
+          thumbImg.loading = "lazy";
+          thumbDiv.appendChild(thumbImg);
+          thumbnailStrip.appendChild(thumbDiv);
+
+          thumbDiv.addEventListener("click", () => {
+            if (!isDragging) showSlide(index);
+          });
+          observer.observe(thumbDiv);
+        });
+
+        const slides = document.querySelectorAll(".slider-image");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        if (thumbnails.length > 0) thumbnails[0].classList.add("active");
+        showSlide(0);
+
+        // --- LIGHTBOX ---
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".lightbox-close");
+        const lightboxPrev = document.querySelector(".lightbox-prev");
+        const lightboxNext = document.querySelector(".lightbox-next");
+        const downloadBtn = document.getElementById("lightbox-download");
+
+        function updateLightboxImage() {
+          if (lightbox.classList.contains("visible")) {
+            const activeSlide = slides[currentSlide];
+            if (activeSlide.dataset.src) {
+              activeSlide.src = activeSlide.dataset.src;
+              delete activeSlide.dataset.src;
+            }
+            lightboxImg.src = activeSlide.src;
+            downloadBtn.href = activeSlide.src;
+            downloadBtn.download = `Inmueble_Foto_${currentSlide + 1}`;
+          }
+        }
+
+        function openLightbox() {
+          lightbox.classList.add("visible");
+          document.body.style.overflow = "hidden";
+          updateLightboxImage();
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("visible");
+          document.body.style.overflow = "auto";
+        }
+
+        sliderContainer.addEventListener("click", (e) => {
+          if (e.target.classList.contains("slider-image") && e.target.classList.contains("active")) {
+            openLightbox();
+          }
+        });
+
+        closeBtn.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener("keydown", (e) => {
+          if (lightbox.classList.contains("visible")) {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowRight") navigateLightbox(1);
+            if (e.key === "ArrowLeft") navigateLightbox(-1);
+          }
+        });
+
+        function navigateLightbox(direction) {
+          showSlide(currentSlide + direction);
+          updateLightboxImage();
+        }
+
+        lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+        lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+        // --- BOTÓN DE COMPARTIR ---
+        const shareBtn = document.getElementById("shareBtn");
+        shareBtn.addEventListener("click", async function () {
+          try {
+            await navigator.clipboard.writeText(propertyConfig.share.whatsappText);
+            shareBtn.innerHTML = `✅ <span>¡ENLACE COPIADO!</span>`;
+            shareBtn.classList.add("shared-success");
+          } catch (err) {
+            alert("Error al copiar. Por favor, copia manualmente.");
+          }
+        });
+
+        // --- MAP LAZY LOADING ---
+        const mapObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const iframe = entry.target;
+              iframe.src = iframe.dataset.src;
+              observer.unobserve(iframe);
+            }
+          });
+        });
+        if (mapIframe) mapObserver.observe(mapIframe);
+      });
+    </script>
+  </body>
+</html>
