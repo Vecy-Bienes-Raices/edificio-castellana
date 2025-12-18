@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="seo-title">Venta Edificio en La Castellana Bogotá - 5 Pisos | Vecy Bienes Raíces</title>
+    <meta name="theme-color" content="#3e2723" />
 
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z'/%3E%3C/svg%3E"
     />
-    <link rel="preload" as="image" href="assets/1.jpg" />
+    <link rel="preload" as="image" href="assets/1.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -377,7 +378,9 @@
         gap: 12px;
         border-radius: 50px;
         cursor: pointer;
-        min-width: 280px; 
+        width: 90%;
+        max-width: 350px;
+        min-width: unset; 
         justify-content: center;
         text-align: center;
         box-shadow: 
@@ -581,8 +584,8 @@
       </div>
     </div>
 
-    <div class="section-title">🎥 Recorrido Virtual</div>
-    <div class="glass-card video-wrapper">
+    <div id="video-section-title" class="section-title">🎥 Recorrido Virtual</div>
+    <div id="video-section-container" class="glass-card video-wrapper">
       <video id="video-element" src="" controls playsinline preload="metadata">
         Tu navegador no soporta el tag de video.
       </video>
@@ -694,7 +697,12 @@
         document.getElementById("valor-admin").innerText = propertyConfig.infoPrincipal.valorAdmin;
 
         // --- Video ---
-        document.getElementById("video-element").src = propertyConfig.multimedia.videoUrl;
+        if (propertyConfig.multimedia.videoUrl) {
+          document.getElementById("video-element").src = propertyConfig.multimedia.videoUrl;
+        } else {
+          document.getElementById("video-section-title").style.display = "none";
+          document.getElementById("video-section-container").style.display = "none";
+        }
 
         // --- Detalles (Specs Grid) ---
         const specsGrid = document.getElementById("specs-grid");

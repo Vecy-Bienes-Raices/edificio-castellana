@@ -78,8 +78,8 @@ const propertyConfig = {
     videoThumbnail: "", 
     imagesCount: 9, 
     imagePrefix: "assets/",
-    imageExtension: ".jpg",
-    imagesList: ["assets/1.jpg", "assets/2.jpeg", "assets/3.jpg", "assets/4.jpg", "assets/5.jpg", "assets/6.jpg", "assets/7.jpg", "assets/8.jpg", "assets/9.jpg"] 
+    imageExtension: ".webp",
+    imagesList: ["assets/1.webp", "assets/2.webp", "assets/3.webp", "assets/4.webp", "assets/5.webp", "assets/6.webp", "assets/7.webp", "assets/8.webp", "assets/9.webp"] 
   },
 
   share: {
