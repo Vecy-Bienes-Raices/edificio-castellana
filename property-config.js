@@ -28,7 +28,7 @@ const propertyConfig = {
     { label: "Parqueaderos", value: "9", icon: "🚗" },
     { label: "Estrato", value: "4", icon: "✨" },
     { label: "Año", value: "2002", icon: "📅" },
-    { label: "Barrio", value: "La Castellana, Barrios Unidos, Bogotá", icon: "📍" },
+    { label: "Barrio", value: "La Castellana, Bogotá", icon: "📍" },
     { label: "Uso", value: "Mixto/Vivienda", icon: "💼" }
   ],
 
