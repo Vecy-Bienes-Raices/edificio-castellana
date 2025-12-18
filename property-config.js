@@ -8,7 +8,7 @@ const propertyConfig = {
     description: "Gran Oportunidad de Inversión: Edificio completo en La Castellana, Bogotá. 871 m², 5 pisos, 6 apartamentos + Pent-house. Ideal para oficinas o vivienda.",
     keywords: "Venta Edificio La Castellana, Edificio Bogotá, Inversión Inmobiliaria, Edificio Oficinas Bogotá, Venta Edificio Barrios Unidos, Inmuebles Bogotá",
     ogUrl: "https://edificio-castellana-bogota.netlify.app/", 
-    ogImage: "assets/1.jpg",
+    ogImage: "https://edificio-castellana-bogota.netlify.app/assets/1.jpg",
     author: "Inmobiliaria",
     copyright: "Derechos Reservados"
   },
